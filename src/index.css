@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --bg-color: #EAE7DC;
+  --bg-color-dark: #D8C3A5;
+  --red-color: #E98074;
+  --red-color-dark: #E85A4F;
+  --grey-color: #8E8D8A;
+}
+
+body {
+	background: var(--bg-color);
+
+  --fs-header-link: 25px;
+  --fs-header-link-desk: 25px;
+  --fs-header-link-tab: 18px;
+  --fs-header-link-mob: 16px;
+  --fs-clear-btn: 18px;
+  --fs-clear-btn-tab: 14px;
+  --fs-clear-btn-mob: 12px;
+
+  --fs-error-msg: 18px;
+  --fs-404-title: 25px;
+  --fs-404-link: 25px;
+  --fs-shops-item: 20px;
+  --fs-shops-item-desk: 18px;
+  --fs-shops-item-tab: 16px;
+  --fs-goods-item-title: 18px;
+  --fs-goods-item-title-tab: 14px;
+  --fs-goods-item-descr: 14px;
+  --fs-goods-item-descr-tab: 12px;
+  --fs-goods-item-price: 18px;
+  --fs-goods-item-price-tab: 14px;
+  --fs-form-label: 16px;
+  --fs-form-input: 14px;
+  --fs-form-error: 11px;
+  --fs-form-btn: 16px;
+  --fs-form-btn-desk: 14px;
+  --fs-basket-item-title: 18px;
+  --fs-basket-item-title-desk: 16px;
+  --fs-basket-item-title-tab: 14px;
+  --fs-basket-item-price: 16px;
+  --fs-basket-item-price-tab: 14px;
+  --fs-basket-item-btn: 20px;
+  --fs-basket-item-btn-tab: 16px;
+  --fs-order-label: 18px;
+  --fs-order-label-desk: 16px;
+  --fs-order-label-tab: 14px;
+  --fs-order-input: 14px;
+  --fs-order-input-tab: 12px;
+  --fs-order-btn: 16px;
+  --fs-order-btn-tab: 14px;
+  --fs-order-title: 18px;
+  --fs-order-title-desk: 15px;
+  --fs-order-title-tab: 14px;
+  --fs-order-item-add: 14px;
+  --fs-order-item-shop: 16px;
+  --fs-order-item-shop-tab: 14px;
+  --fs-order-item-prod: 14px;
+  --fs-order-item-info: 16px;
+  --fs-order-item-info-desk: 14px;
+  --fs-order-item-id: 14px;
+  --fs-order-item-id-tab: 12px;
+  --fs-coupones-title: 20px;
+  --fs-coupones-title-tab: 18px;
+  --fs-coupones-title-tab: 16px;
+  --fs-coupones-info: 16px;
+  --fs-coupones-info-tab: 14px;
+  --fs-coupones-item: 18px;
+  --fs-coupones-item-desk: 16px;
+  --fs-coupones-item-tab: 14px;
+  --fs-single-title: 25px;
+  --fs-single-title-tab: 20px;
+  --fs-single-title-mob: 16px;
+  --fs-single-descr: 20px;
+  --fs-single-descr-tab: 16px;
+  --fs-single-descr-mob: 14px;
+  --fs-single-btn: 16px;
+
+
+  --border-nav-radius: 20px;
+  --border-shops-radius: 20px;
+  --border-shops-radius-mob: 15px;
+  --border-shop-item-radius: 10px;
+  --border-goods-radius: 20px;
+  --border-goods-item-radius: 20px;
+  --border-goods-item-btn-radius: 8px;
+  --border-btn-radius: 8px;
+  --border-btn-radius-mob: 6px;
+  --border-form-radius: 20px;
+  --border-form-input-radius: 8px;
+  --border-form-btn-radius: 8px;
+  --border-basket-list-radius: 20px;
+  --border-order-form-radius: 20px;
+  --border-order-input-radius: 10px;
+  --border-order-btn-radius: 10px;
+  --border-order-list-radius: 20px;
+  --border-coupones-item-radius: 14px;
+  --border-single-item-radius: 20px;
+  --border-single-btn-radius: 10px;
+
+
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
