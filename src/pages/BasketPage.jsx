@@ -4,9 +4,10 @@ import { Helmet } from 'react-helmet';
 import { Container } from "../components/Container";
 import { BasketForm } from "../features/basket/BasketForm";
 import { BasketList } from "../features/basket/BasketList";
+import { BasketAmount } from "../features/basket/BasketAmount";
 
 const Wrapper = styled.div`
-   margin-top: 30px;
+   margin-top: var(--margin-page);
    display: grid;
    grid-template-columns: 300px 800px;
    column-gap: 40px;
@@ -26,7 +27,7 @@ const Wrapper = styled.div`
       row-gap: 50px;
    }
    @media(max-width: 576px) {
-      margin-top: 70px;
+      margin-top: var(--margin-page-mob);
    }
 `;
 
@@ -49,6 +50,7 @@ const BasketPage = () => {
                <BasketForm/>
                <BasketList/>
             </Wrapper>
+            <BasketAmount/>
          </Container>
       </>
    )

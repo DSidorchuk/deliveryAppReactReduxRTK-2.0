@@ -2,7 +2,8 @@ import { styled } from "styled-components";
 
 export const Shop = styled.li`
    padding-left: 10px;
-   border-radius: var(--border-shop-item-radius);
+   border-radius: var(--border-item-rad);
+   font-size: var(--fs-sho);
    box-shadow: ${({id, active}) => id === active 
       ? '0 0 2px white' 
       : 'unset'};
@@ -14,9 +15,9 @@ export const Shop = styled.li`
       transition: all 0.6s;
       scale: 110%;
    }
-
    @media(max-width: 768px) {
       padding: 0 10px;
+      font-size: var(--fs-shop-sm);
    }
 `;
 

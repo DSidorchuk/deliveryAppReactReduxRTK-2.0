@@ -1,9 +1,5 @@
 import { styled } from 'styled-components';
 
-import { Address } from './Address';
-import { Shop } from './Shop';
-import { Info } from './Info';
-import { Id } from './Id';
 
 const Wrapper = styled.div`
    &:after {
@@ -35,12 +31,47 @@ const List = styled.ul`
    }
 `;
 
+const Id = styled.p`
+   font-size: var(--fs-digit-md);
+   color: var(--grey-color);
+
+   @media(max-width: 992px) {
+      font-size: var(--fs-digit-sm);
+   }
+`;
+
+const Info = styled.p`
+   text-transform: uppercase;
+   font-size: var(--fs-digit-lg);
+   font-weight: 700;
+
+   @media(max-width: 992px) {
+      font-size: var(--fs-digit-md);
+   }
+`;
+
+const Address = styled.div`
+   margin-top: 5px;
+   font-size: var(--fs-descr-md);
+`;
+
+const Shop = styled.div`
+   margin-top: 5px;
+   text-transform: uppercase;
+   font-size: var(--fs-descr-lg);
+   color: var(--red-color);
+
+   @media(max-width: 992px) {
+      font-size: var(--fs-descr-md);
+   }
+`;
+
 const Item = styled.li`
    margin-left: 10px;
    display: flex;
    justify-content: space-between;
    width: 320px;
-   font-size: var(--fs-order-item-prod);
+   font-size: var(--fs-descr-md);
 
    @media(max-width: 576px) {
       margin-left: 0;

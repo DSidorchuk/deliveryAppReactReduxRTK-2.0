@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 const Wrapper = styled.div`
    margin: 0 auto;
    text-align: center;
-   font-size: var(--fs-error-msg);
+   font-size: var(--fs-error-md);
 `;
 
 const Error = () => {

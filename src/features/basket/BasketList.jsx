@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { useBasketList } from "./use-basket-list";
 import { incrQtty, decrQtty } from "./basket-slice";
-import { BasketItem } from "../../components/basket-list/BasketItem";
+import { BasketItem } from "../../components/BasketItem";
 
 const Wrapper = styled.div`
    padding: 30px 20px;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
    grid-auto-rows: 80px;
    row-gap: 10px;
    border: 1px solid  var(--red-color-dark);
-   border-radius: var(--border-basket-list-radius);
+   border-radius: var(--border-wrapper-rad);
 
    @media(max-width: 992px) {
       padding: 20px 10px;

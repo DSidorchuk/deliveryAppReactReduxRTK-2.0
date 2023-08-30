@@ -6,18 +6,17 @@ import { OrdersForm } from '../features/orders/OrdersForm';
 import { OrdersList } from '../features/orders/OrdersList';
 
 const Wrapper = styled.div`
-   margin-top: 30px;
+   margin-top: var(--margin-page);
    display: grid;
    grid-template-rows: 70px 1fr;
    row-gap: 40px;
 
    @media(max-width: 992px) {
-      margin-top: 30px;
       grid-template-rows: 50px 1fr;
       row-gap: 20px;
    }
    @media(max-width: 576px) {
-      margin-top: 70px;
+      margin-top: var(--margin-page-mob);
       grid-template-rows: minmax(100px, auto) 1fr;
       grid-template-columns: 1fr;
       row-gap: 20px;

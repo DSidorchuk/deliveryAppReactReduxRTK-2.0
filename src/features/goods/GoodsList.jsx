@@ -18,7 +18,7 @@ const Wrapper = styled.div`
    row-gap: 20px;
    justify-content: center;
    border: 1px solid  var(--red-color-dark);
-   border-radius: var(--border-goods-radius);
+   border-radius: var(--border-wrapper-rad);
 
    @media(max-width: 1200px){
       padding: 20px 10px 20px 10px;

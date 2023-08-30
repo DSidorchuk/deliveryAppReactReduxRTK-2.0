@@ -2,19 +2,19 @@ import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
-   margin-top: 30px;
+   margin-top: var(--margin-page);
+   
+   @media(max-width: 576px) {
+      margin-top: var(--margin-page-mob);
+   }
 `;
 
 const Title = styled.h1`
    margin-top: 30px;
    text-align: center;
    text-transform: uppercase;
-   font-size: var(--fs-404-title);
+   font-size: var(--fs-error-lg);
    font-weight: 700;
-
-   @media(max-width: 576px) {
-      margin-top: 70px;
-   }
 `;
 
 const HomeLink = styled(Link).attrs({to: '/'})`
@@ -23,7 +23,7 @@ const HomeLink = styled(Link).attrs({to: '/'})`
    text-align: center;
    text-decoration: none;
    text-transform: uppercase;
-   font-size: var(--fs-404-link);
+   font-size: var(--fs-error-lg);
    font-weight: 700;
    color: var(--red-color-dark);
 `;

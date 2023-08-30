@@ -2,12 +2,12 @@ import { styled } from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 
 import { addItem, setSelectedShop, selectOrderFromShop, selecQttyOfGood } from "../basket/basket-slice";
-import { Image } from "../../components/single-good/Image";
-import { Title } from "../../components/single-good/Title";
-import { Description } from "../../components/single-good/Description";
-import { Price } from "../../components/single-good/Price";
-import { Qtty } from "../../components/single-good/Qtty";
-import { Button } from "../../components/single-good/Button";
+import { ImageLg } from "../../components/product-data/Image";
+import { TitleLg } from "../../components/product-data/Title";
+import { DescriptionLg } from "../../components/product-data/Description";
+import { PriceLg } from "../../components/product-data/Price";
+import { Qtty } from "../../components/product-data/Qtty";
+import { ButtonLg } from "../../components/Button";
 
 const Wrapper = styled.div`
    margin-top: 30px;
@@ -39,7 +39,7 @@ const Grid = styled.div`
    grid-template-rows: 30px 1fr 30px;
    row-gap: 30px;
    border: 1px solid var(--grey-color);
-   border-radius: var(--border-single-item-radius);
+   border-radius: var(--border-wrapper-rad);
    &:hover {
       transition: all 0,5s;
       border: 1px solid var(--red-color-dark);
@@ -77,14 +77,14 @@ const SingleGoodData = ({item, shop}) => {
 
    return (
       <Wrapper>
-         <Image src={image} alt={name}/>
+         <ImageLg src={image} alt={name}/>
          <Grid>
-            <Title>{name}</Title>
-            <Description>{description}</Description>
+            <TitleLg>{name}</TitleLg>
+            <DescriptionLg>{description}</DescriptionLg>
             <OrderBox>
-               <Price>{price} ГРН</Price>
+               <PriceLg>{price} ГРН</PriceLg>
                <Qtty>{qtty}</Qtty>
-               <Button onClick={addToBasket}>Замовити</Button>
+               <ButtonLg onClick={addToBasket}>Замовити</ButtonLg>
             </OrderBox>
          </Grid>
       </Wrapper>

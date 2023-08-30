@@ -28,7 +28,7 @@ const Navigation = styled.nav`
    align-items: center;
    height: 60px;
    border: 2px solid  var(--red-color-dark);
-   border-radius: var(--border-nav-radius);
+   border-radius: var(--border-wrapper-rad);
 
    @media(max-width: 768px) {
       height: 40px;

@@ -27,9 +27,9 @@ const ListItem = styled.li`
    align-items: center;
    justify-content: center;
    border: 1px solid var(--grey-color);
-   border-radius: var(--border-coupones-item-radius);
+   border-radius: var(--border-item-rad);
    text-align: center;
-   font-size: var(--fs-coupones-item);
+   font-size: var(--fs-descr-xl);
    &:nth-child(odd) {
       background-color: var(--red-color-dark);
       border: none;
@@ -37,10 +37,10 @@ const ListItem = styled.li`
    }
 
    @media(max-width: 992px) {
-      font-size: var(--fs-coupones-item-desk);
+      font-size: var(--fs-descr-lg);
    }
    @media(max-width: 768px) {
-      font-size: var(--fs-coupones-item-tab);
+      font-size: var(--fs-descr-md);
    }
 `;
 

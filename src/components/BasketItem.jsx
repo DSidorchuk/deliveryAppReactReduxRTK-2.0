@@ -1,11 +1,9 @@
 import { styled } from "styled-components";
 
-import { Image } from "./Image";
-import { Title } from "./Title";
-import { Price } from "./Price";
-import { QttyButton} from "./QttyButton";
-import { Qtty } from "./Qtty";
-import { Amount } from "./Amount";
+import { ImageXs } from "./product-data/Image";
+import { TitleXs } from "./product-data/Title";
+import { QttyXs } from "./product-data/Qtty";
+
 
 const Wrapper = styled.div`
    display: grid;
@@ -69,21 +67,55 @@ const QttyBox = styled.div`
    align-items: center;
 `;
 
+const Number = styled.div`
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   text-align: right;
+   font-size: var(--fs-digit-lg);
+
+   @media(max-width: 992px) {
+      font-size: var(--fs-digit-md);
+   }
+`;
+
+const QttyButton = styled.button`
+   padding: 0;
+   background-color: var(--red-color-dark);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   border: none;
+   border-radius: 100%;
+   text-align: center;
+   font-size: var(--fs-btn-lg);
+   font-weight: 700;
+   color: var(--bg-color);
+
+   @media(max-width: 992px) {
+      width: 20px;
+      height: 20px;
+      font-size: var(--fs-btn-md);
+   }
+`;
+
 const BasketItem = ({image, name, price, qtty, onIncr, onDecr}) => {
    return (
       <Wrapper>
          <GridDescr>
-            <Image src={image} alt={name}/>
-            <Title>{name}</Title>
+            <ImageXs src={image} alt={name}/>
+            <TitleXs>{name}</TitleXs>
          </GridDescr>
          <GridVolume>
-            <Price>{price} ГРН</Price>
+            <Number>{price} ГРН</Number>
             <QttyBox>
                <QttyButton onClick={onDecr}>-</QttyButton>
-               <Qtty>{qtty}</Qtty>
+               <QttyXs>{qtty}</QttyXs>
                <QttyButton onClick={onIncr}>+</QttyButton>
             </QttyBox>
-            <Amount>{price * qtty} ГРН</Amount>
+            <Number>{price * qtty} ГРН</Number>
          </GridVolume>
       </Wrapper>
    )

@@ -9,8 +9,9 @@ import { Error } from "../components/Error";
 import { useSingleGood } from "../features/single-good/use-single-good";
 
 const Wrapper = styled(Container)`
+   margin-top: var(--margin-page);
    @media(max-width: 576px) {
-      margin-top: 70px;
+      margin-top: var(--margin-page-mob);
    }
 `;
 

@@ -6,16 +6,16 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { selectBasketData, clearBasket } from "./basket-slice";
 import { selectOrdersStatus, postOrder } from "../orders/orders-slice";
-import { FormLabel } from '../../components/basket-form/FormLabel';
-import { FormInput } from '../../components/basket-form/FormInput';
-import { SubmitButton } from '../../components/basket-form/SubmitButton';
-import { FormError } from '../../components/basket-form/FormError'
+import { LabelSm } from '../../components/form/Label';
+import { InputSm } from '../../components/form/Input';
+import { SubmitSm } from '../../components/form/SubmitButton';
+import { FormError } from '../../components/form/FormError'
 import { phoneRegExp } from '../phone-regexp';
 
 const Wrapper = styled.div`
    padding: 30px;
    background-color: var(--red-color-dark);
-   border-radius: var(--border-form-radius);
+   border-radius: var(--border-wrapper-rad);
 
    @media(max-width: 992px) {
       padding: 20px 10px 30px 10px;
@@ -109,8 +109,8 @@ const BasketForm = () => {
          >
             <FormGrid>
                <InputWrapper>
-                  <FormLabel htmlFor='name'>Ваше ім'я</FormLabel>
-                  <FormInput 
+                  <LabelSm htmlFor='name'>Ваше ім'я</LabelSm>
+                  <InputSm 
                      id="name"
                      name="name"
                      type="text"
@@ -119,8 +119,8 @@ const BasketForm = () => {
                   <FormError name='name' component='div'/>
                </InputWrapper>
                <InputWrapper>
-                  <FormLabel htmlFor='name'>Ваш телефон</FormLabel>
-                  <FormInput 
+                  <LabelSm htmlFor='name'>Ваш телефон</LabelSm>
+                  <InputSm 
                      id="phone"
                      name="phone"
                      type="phone"
@@ -129,8 +129,8 @@ const BasketForm = () => {
                   <FormError name='phone' component='div'/>
                </InputWrapper>
                <InputWrapper>
-                  <FormLabel htmlFor='name'>Ваш e-mail</FormLabel>
-                  <FormInput 
+                  <LabelSm htmlFor='name'>Ваш e-mail</LabelSm>
+                  <InputSm 
                      id="email"
                      name="email"
                      type="email"
@@ -139,20 +139,20 @@ const BasketForm = () => {
                   <FormError name='email' component='div'/>
                </InputWrapper>
                <InputWrapper>
-                  <FormLabel htmlFor='name'>Ваша адреса</FormLabel>
-                  <FormInput 
+                  <LabelSm htmlFor='name'>Ваша адреса</LabelSm>
+                  <InputSm 
                      id="address"
                      name="address"
                      type="text"
-                     placeholder="Введіть вашу пошту"
+                     placeholder="Введіть вашу адресу"
                   />
                   <FormError name='address' component='div'/>
                </InputWrapper>
-               <SubmitButton
+               <SubmitSm
                   disabled={postStatus === 'loading' || !list.length}
                >
                   Підтвердити замовлення
-               </SubmitButton>
+               </SubmitSm>
             </FormGrid>
          </Formik>
       </Wrapper>

@@ -5,7 +5,12 @@ import { Transition } from 'react-transition-group';
 import { useRef } from "react";
 
 import { selecQttyOfGood } from "../basket/basket-slice";
-
+import { ImageSm } from "../../components/product-data/Image";
+import { TitleSm } from "../../components/product-data/Title";
+import { DescriptionSm } from "../../components/product-data/Description";
+import { PriceSm } from "../../components/product-data/Price";
+import { QttySm } from "../../components/product-data/Qtty";
+import { ButtonSm } from "../../components/Button";
 
 const Wrapper = styled.div`
    padding: 10px;
@@ -14,7 +19,7 @@ const Wrapper = styled.div`
    row-gap: 12px;
    min-height: 280px;
    border: 1px solid var(--grey-color);
-   border-radius: var(--border-goods-item-radius);
+   border-radius: var(--border-wrapper-rad);
 
    &:hover {
       transition: all 0,5s;
@@ -28,31 +33,6 @@ const Wrapper = styled.div`
    }
 `;
 
-const Image = styled.img`
-   display: block;
-   width: 100%;
-   height: 200px;
-   object-fit: cover;
-`;
-
-const Title = styled.h3`
-   text-align: center;
-   font-size: var(--fs-goods-item-title);
-   font-weight: 700;
-
-   @media(max-width: 768px) {
-      font-size: var(--fs-goods-item-title-tab);
-   }
-`;
-
-const Descr = styled.p`
-   font-size: var(--fs-goods-item-descr);
-
-   @media(max-width: 768px) {
-      font-size: var(--fs-goods-item-descr-tab);
-   }
-`;
-
 const PriceBox = styled.div`
    display: flex;
    justify-content: space-between;
@@ -60,46 +40,6 @@ const PriceBox = styled.div`
 
    @media(max-width: 576px) {
       align-items: center;
-   }
-`;
-
-const Price = styled.p`
-   padding-left: 10px;
-   font-size: var(--fs-goods-item-price);
-   font-weight: 700;
-   line-height: 30px;
-
-   @media(max-width: 768px) {
-      font-size: var(--fs-goods-item-price-tab);
-   }
-`;
-
-const Qtty = styled.p`
-   font-size: var(--fs-goods-item-price);
-   line-height: 30px;
-   color: var(--grey-color);
-
-   @media(max-width: 768px) {
-      font-size: var(--fs-goods-item-descr-tab);
-   }
-`;
-
-const Button = styled.button`
-   background-color: var(--red-color-dark);
-   border: none;
-   border-radius: var(--border-goods-item-btn-radius);
-   text-transform: uppercase;
-   font-size: var(--fs-goods-item-price);
-   color: var(--bg-color);
-   cursor: pointer;
-
-   &:active {
-      transition: all 0.2s;
-      scale: 0.75;
-   }
-
-   @media(max-width: 768px) {
-      font-size: var(--fs-goods-item-price-tab);
    }
 `;
 
@@ -139,14 +79,14 @@ const GoodsItem = ({item, shortDescr, handleClick, activeShop, appear}) => {
          {(state) => (
             <Wrapper ref={nodeRef} style={{...defaultStyle, ...animationStyles[state]}}>
                <Link to={`/${activeShop}/${id}`}>
-                  <Image src={image} alt={name}/>
+                  <ImageSm src={image} alt={name}/>
                </Link>
-               <Title>{name}</Title>
-               <Descr>{shortDescr}</Descr>
+               <TitleSm>{name}</TitleSm>
+               <DescriptionSm>{shortDescr}</DescriptionSm>
                <PriceBox>
-                  <Price>{price} грн</Price>
-                  <Qtty>{qtty}</Qtty>
-                  <Button onClick={handleClick}>замовити</Button>
+                  <PriceSm>{price} грн</PriceSm>
+                  <QttySm>{qtty}</QttySm>
+                  <ButtonSm onClick={handleClick}>замовити</ButtonSm>
                </PriceBox>
             </Wrapper>
          )}

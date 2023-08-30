@@ -3,9 +3,8 @@ import { useSelector } from 'react-redux';
 
 import { Spinner } from '../../components/Spinner';
 import { Error } from '../../components/Error';
-import { Title } from '../../components/orders-list/Title';
 import { selectOrders, selectPresentOrders } from './orders-slice';
-import { OrderItem } from '../../components/orders-list/OrderItem';
+import { OrderItem } from '../../components/OrderItem';
 import { dateParser } from './date-parser';
 
 
@@ -18,7 +17,7 @@ const Wrapper = styled.div`
    row-gap: 30px;
    width: calc(100% - 40px);
    border: 1px solid  var(--red-color-dark);
-   border-radius: var(--border-order-list-radius);
+   border-radius: var(--border-wrapper-rad);
 
    @media(max-width: 1200px) {
       width: 918px;
@@ -41,6 +40,17 @@ const Grid = styled.div`
    grid-template-rows: minmax(120px, auto);
    grid-auto-rows: minmax(120px, auto);
    row-gap: 15px;
+`;
+
+const Title = styled.h3`
+   text-transform: uppercase;
+   font-size: var(--fs-title-lg);
+   font-weight: 700;
+   color: var(--red-color-dark);
+
+   @media(max-width: 992px) {
+      font-size: var(--fs-title-sm);
+   }
 `;
 
 const OrdersList = () => {

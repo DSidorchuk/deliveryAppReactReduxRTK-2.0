@@ -19,16 +19,12 @@ const Wrapper = styled.div`
       padding: 10px;
       min-height: 50px;
    }
-   @media(max-width: 576px) {
-      border-radius: var(--border-shops-radius-mob);
-   }
 `;
 
 const List = styled.ul`
    padding: 20px;
-   border-radius: var(--border-shops-radius);
+   border-radius: var(--border-wrapper-rad);
    text-align: left;
-   font-size: var(--fs-shops-item);
    font-weight: 700;
    line-height: 40px;
    color: var(--bg-color);
@@ -36,7 +32,6 @@ const List = styled.ul`
 
    @media(max-width: 992px) {
       padding: 20px 10px;
-      font-size: var(--fs-shops-item-desk);
    }
    @media(max-width: 768px) {
       padding: 0;
@@ -44,7 +39,6 @@ const List = styled.ul`
       justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
-      font-size: var(--fs-shops-item-tab);
    }
    @media(max-width: 576px) {
       flex-direction: column;

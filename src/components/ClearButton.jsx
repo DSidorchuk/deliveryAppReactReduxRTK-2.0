@@ -11,12 +11,12 @@ const Button = styled.button`
    right: 50%;
    top: -15px;
    transform: translateX(50%);
-   width: 200px;
+   width: 180px;
    height: 30px;
    border: 1px solid var(--red-color-dark);
-   border-radius: var(--border-btn-radius);
+   border-radius: var(--border-btn-rad);
    text-transform: uppercase;
-   font-size: var(--fs-clear-btn);
+   font-size: var(--fs-btn-md);
    font-weight: 700;
 
    @media(max-width: 768px) {
@@ -27,8 +27,8 @@ const Button = styled.button`
       transform: unset;
       width: 125px;
       border: none;
-      border-radius: var(--border-btn-radius-mob);
-      font-size: var(--fs-clear-btn-mob);
+      border-radius: var(--border-btn-rad-lg);
+      font-size: var(--fs-btn-xs);
       color: var(--red-color-dark);
    }
 

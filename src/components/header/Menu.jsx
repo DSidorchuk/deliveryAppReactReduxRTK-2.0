@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 
 const Link = styled(NavLink)`
    text-transform: uppercase;
-   font-size: var(--fs-header-link);
+   font-size: var(--fs-link);
    font-weight: 700;
    color: black;
 
@@ -16,14 +16,8 @@ const Link = styled(NavLink)`
       color: var(--red-color-dark);
    }
 
-   @media(max-width: 992px) {
-      font-size: var(--fs-header-link-desk);
-   }
    @media(max-width: 768px) {
-      font-size: var(--fs-header-link-tab);
-   }
-   @media(max-width: 576px) {
-      font-size: var(--fs-header-link-mob);
+      font-size: var(--fs-link-sm);
    }
 `;
 

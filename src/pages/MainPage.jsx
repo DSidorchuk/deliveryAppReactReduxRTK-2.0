@@ -6,7 +6,7 @@ import { ShopsList } from "../features/shops/ShopsList";
 import { GoodsList } from "../features/goods/GoodsList";
 
 const ContainerGrid = styled(Container)`
-   margin-top: 30px;
+   margin-top: var(--margin-page);
    display: grid;
    grid-template-columns: 200px 900px;
    column-gap: 40px;
@@ -29,7 +29,7 @@ const ContainerGrid = styled(Container)`
       row-gap: 20px;
    }
    @media(max-width: 576px) {
-      margin-top: 70px;
+      margin-top: var(--margin-page-mob);
    }
 `;
 
